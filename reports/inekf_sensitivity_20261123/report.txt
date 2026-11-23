@@ -1,0 +1,79 @@
+G1 InEKF 输入敏感性分析（开发轮）
+完成回放：64/64；状态：{'ok': 64, 'invalid': 0, 'failed': 0}
+使用固定轨迹和固定滤波参数；扰动在基线初始化之后开始。
+单位：位置/DCM 为 m，速度为 m/s，倾角为 deg。以下数值为匀速段 RMSE。
+case | trial | contact | base velocity | CoM velocity | DCM | DCM difference from baseline
+baseline | no_push | truth_stable | 0.01058946 | 0.01068086 | 0.02318677 | +0.00000000
+baseline | no_push | rule | 0.01183032 | 0.01191286 | 0.02231137 | +0.00000000
+sign_4 | no_push | truth_stable | 0.02565683 | 0.02552727 | 0.02464593 | +0.00145915
+sign_4 | no_push | rule | 0.03014253 | 0.03017002 | 0.01777164 | -0.00453973
+sign_5 | no_push | truth_stable | 0.01983142 | 0.01979914 | 0.02516932 | +0.00198255
+sign_5 | no_push | rule | 0.01987159 | 0.01982801 | 0.03525599 | +0.01294462
+sign_10 | no_push | truth_stable | 0.02465324 | 0.02459150 | 0.05687105 | +0.03368428
+sign_10 | no_push | rule | 0.03201345 | 0.03194364 | 0.10016531 | +0.07785394
+sign_11 | no_push | truth_stable | 0.02044937 | 0.02046064 | 0.02494875 | +0.00176198
+sign_11 | no_push | rule | 0.02117545 | 0.02117089 | 0.02385211 | +0.00154074
+swap_4_5 | no_push | truth_stable | 0.02931342 | 0.02915893 | 0.02855740 | +0.00537063
+swap_4_5 | no_push | rule | 0.03649409 | 0.03642115 | 0.08939867 | +0.06708730
+swap_10_11 | no_push | truth_stable | 0.02371256 | 0.02379142 | 0.02813622 | +0.00494945
+swap_10_11 | no_push | rule | 0.02740427 | 0.02744519 | 0.04893696 | +0.02662559
+dq_residual | no_push | truth_stable | 0.01058946 | 0.01068012 | 0.02318667 | -0.00000011
+dq_residual | no_push | rule | 0.01183032 | 0.01191198 | 0.02231122 | -0.00000015
+delay_2ms | no_push | truth_stable | 0.01073065 | 0.01027091 | 0.02236763 | -0.00081915
+delay_2ms | no_push | rule | 0.01253285 | 0.01223188 | 0.02337709 | +0.00106572
+delay_10ms | no_push | truth_stable | 0.01317884 | 0.01387142 | 0.02038047 | -0.00280630
+delay_10ms | no_push | rule | 0.01419229 | 0.01528554 | 0.02012062 | -0.00219076
+delay_20ms | no_push | truth_stable | 0.01897194 | 0.02581177 | 0.02225421 | -0.00093256
+delay_20ms | no_push | rule | 0.02120778 | 0.02718310 | 0.03475565 | +0.01244428
+noise_seed_0 | no_push | truth_stable | 0.01053674 | 0.01064231 | 0.02301599 | -0.00017078
+noise_seed_0 | no_push | rule | 0.01182629 | 0.01192761 | 0.02221126 | -0.00010011
+noise_seed_1 | no_push | truth_stable | 0.01061700 | 0.01071792 | 0.02315945 | -0.00002732
+noise_seed_1 | no_push | rule | 0.01196966 | 0.01206596 | 0.02250449 | +0.00019312
+noise_seed_2 | no_push | truth_stable | 0.01061800 | 0.01071011 | 0.02296262 | -0.00022415
+noise_seed_2 | no_push | rule | 0.01165902 | 0.01174100 | 0.02188840 | -0.00042297
+noise_seed_3 | no_push | truth_stable | 0.01101490 | 0.01110416 | 0.02349185 | +0.00030507
+noise_seed_3 | no_push | rule | 0.01221437 | 0.01229278 | 0.02278386 | +0.00047249
+noise_seed_4 | no_push | truth_stable | 0.01081643 | 0.01090683 | 0.02380550 | +0.00061873
+noise_seed_4 | no_push | rule | 0.01203602 | 0.01211756 | 0.02287395 | +0.00056258
+baseline | right_40N | truth_stable | 0.01075815 | 0.01082989 | 0.02502173 | +0.00000000
+baseline | right_40N | rule | 0.01238726 | 0.01246047 | 0.02499843 | +0.00000000
+sign_4 | right_40N | truth_stable | 0.02510700 | 0.02497250 | 0.02347730 | -0.00154443
+sign_4 | right_40N | rule | 0.03028559 | 0.03033728 | 0.02985303 | +0.00485460
+sign_5 | right_40N | truth_stable | 0.01938648 | 0.01935661 | 0.02504254 | +0.00002082
+sign_5 | right_40N | rule | 0.01904536 | 0.01900199 | 0.03180737 | +0.00680893
+sign_10 | right_40N | truth_stable | 0.02522585 | 0.02505767 | 0.05637385 | +0.03135212
+sign_10 | right_40N | rule | 0.03127993 | 0.03116668 | 0.09910839 | +0.07410995
+sign_11 | right_40N | truth_stable | 0.02019663 | 0.02020802 | 0.02517948 | +0.00015775
+sign_11 | right_40N | rule | 0.02046508 | 0.02046034 | 0.02496179 | -0.00003664
+swap_4_5 | right_40N | truth_stable | 0.02842811 | 0.02827694 | 0.03157828 | +0.00655655
+swap_4_5 | right_40N | rule | 0.03633760 | 0.03627346 | 0.08468808 | +0.05968964
+swap_10_11 | right_40N | truth_stable | 0.02239341 | 0.02244164 | 0.03152490 | +0.00650317
+swap_10_11 | right_40N | rule | 0.02653134 | 0.02657071 | 0.04884482 | +0.02384639
+dq_residual | right_40N | truth_stable | 0.01075815 | 0.01082911 | 0.02502155 | -0.00000018
+dq_residual | right_40N | rule | 0.01238726 | 0.01245943 | 0.02499819 | -0.00000024
+delay_2ms | right_40N | truth_stable | 0.01079420 | 0.01035142 | 0.02401293 | -0.00100880
+delay_2ms | right_40N | rule | 0.01291375 | 0.01260858 | 0.02592802 | +0.00092958
+delay_10ms | right_40N | truth_stable | 0.01297187 | 0.01393036 | 0.02125078 | -0.00377094
+delay_10ms | right_40N | rule | 0.01506567 | 0.01611970 | 0.02602415 | +0.00102572
+delay_20ms | right_40N | truth_stable | 0.01870802 | 0.02560141 | 0.02215746 | -0.00286426
+delay_20ms | right_40N | rule | 0.02204579 | 0.02765255 | 0.04075455 | +0.01575612
+noise_seed_0 | right_40N | truth_stable | 0.01069213 | 0.01077617 | 0.02494867 | -0.00007306
+noise_seed_0 | right_40N | rule | 0.01239050 | 0.01247901 | 0.02521291 | +0.00021447
+noise_seed_1 | right_40N | truth_stable | 0.01070896 | 0.01078686 | 0.02493785 | -0.00008388
+noise_seed_1 | right_40N | rule | 0.01235774 | 0.01244154 | 0.02492043 | -0.00007800
+noise_seed_2 | right_40N | truth_stable | 0.01078816 | 0.01086283 | 0.02461468 | -0.00040704
+noise_seed_2 | right_40N | rule | 0.01217926 | 0.01225522 | 0.02434062 | -0.00065781
+noise_seed_3 | right_40N | truth_stable | 0.01117728 | 0.01124750 | 0.02538597 | +0.00036424
+noise_seed_3 | right_40N | rule | 0.01282989 | 0.01289852 | 0.02544250 | +0.00044407
+noise_seed_4 | right_40N | truth_stable | 0.01089089 | 0.01096336 | 0.02578457 | +0.00076285
+noise_seed_4 | right_40N | rule | 0.01262617 | 0.01270085 | 0.02575794 | +0.00075951
+
+解释边界：
+Fixed-trajectory offline sensitivity, not estimator/controller-in-the-loop simulation.
+Two development trajectories; five noise seeds are not independent locomotion trials.
+No PR/AB verdict: sign and swap faults are not physical AB kinematics.
+Noise statistics from a suspended ten-second hold are diagnostic, not calibrated sensor specifications.
+Fixed initialization and filter parameters; no tuning on individual injected errors.
+误差变小只表示该轨迹上的误差抵消，不能据此选择错误坐标或调参。
+本测试不能确认实机 PR/AB 语义、力矩精度或闭环收益；不能用两条开发轨迹宣称泛化。
+详细的足端差异、分窗估计误差、接触误报漏报、协方差及失败分母见 summary.json。

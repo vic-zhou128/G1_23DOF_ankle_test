@@ -1,0 +1,13 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.venv/
+outputs/
+reports/**/samples.csv
+reports/**/no_push/
+reports/**/right_40N/
+*.npz
+*.mp4
+*.mov
+*.bag

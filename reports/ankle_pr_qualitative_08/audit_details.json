@@ -1,0 +1,597 @@
+{
+  "summary": {
+    "outcome": "operator_exit",
+    "counts": {
+      "state": 1005792,
+      "secondary_imu": 1005964,
+      "observed_lowcmd": 139688,
+      "command": 407631,
+      "analysis": 40764
+    },
+    "dropped": 0,
+    "failed": false,
+    "failure_reason": "",
+    "closed_wall_ns": 1795424940711827986,
+    "final_phase": "closed",
+    "fault_reason": "operator exit",
+    "control_thread_exception": ""
+  },
+  "feedback_timing": {
+    "samples": 1005792,
+    "duration_s": 955.691771749,
+    "mean_rate_hz": 1052.4219520686195,
+    "interval_ms": {
+      "min": 0.138186,
+      "p50": 0.94675,
+      "p99": 1.402602599999999,
+      "max": 27.013686
+    },
+    "intervals_above_50_ms": 0
+  },
+  "command_timing": {
+    "samples": 407631,
+    "duration_s": 815.258619607,
+    "mean_rate_hz": 500.00084659822465,
+    "interval_ms": {
+      "min": 0.20524699999999999,
+      "p50": 1.9961664999999997,
+      "p99": 3.2699055900000067,
+      "max": 32.246814
+    },
+    "intervals_above_50_ms": 0
+  },
+  "lowstate_version_words": [
+    [
+      0,
+      0
+    ]
+  ],
+  "feedback_modes": [
+    [
+      4,
+      0
+    ]
+  ],
+  "command_modes": [
+    [
+      4,
+      0
+    ]
+  ],
+  "crc_invalid_count": 0,
+  "failed_write_count": 0,
+  "active_motor_fault_samples": 0,
+  "max_active_temperature_channels": [
+    46,
+    44
+  ],
+  "state_age_ms": {
+    "p50": 0.826553,
+    "p99": 3.7398381000000085,
+    "max": 34.761962
+  },
+  "operator_observations": [],
+  "damping_events": [
+    {
+      "monotonic_ns": 260732543015757,
+      "wall_ns": 1795424939533618071,
+      "kind": "protective_damping",
+      "reason": "operator exit",
+      "duration_s": 1.0
+    }
+  ],
+  "ankle_fields": {
+    "4": {
+      "ddq_min": 0.0,
+      "ddq_max": 0.0,
+      "ddq_nonzero_samples": 0,
+      "tau_est_min": -2.0848968029022217,
+      "tau_est_max": 1.476893663406372,
+      "temperature_min_channels": [
+        36,
+        34
+      ],
+      "temperature_max_channels": [
+        37,
+        36
+      ]
+    },
+    "5": {
+      "ddq_min": 0.0,
+      "ddq_max": 0.0,
+      "ddq_nonzero_samples": 0,
+      "tau_est_min": -2.03180193901062,
+      "tau_est_max": 1.012367844581604,
+      "temperature_min_channels": [
+        38,
+        37
+      ],
+      "temperature_max_channels": [
+        40,
+        39
+      ]
+    },
+    "10": {
+      "ddq_min": 0.0,
+      "ddq_max": 0.0,
+      "ddq_nonzero_samples": 0,
+      "tau_est_min": -3.297337770462036,
+      "tau_est_max": 3.036155939102173,
+      "temperature_min_channels": [
+        38,
+        37
+      ],
+      "temperature_max_channels": [
+        39,
+        38
+      ]
+    },
+    "11": {
+      "ddq_min": 0.0,
+      "ddq_max": 0.0,
+      "ddq_nonzero_samples": 0,
+      "tau_est_min": -1.8505398035049438,
+      "tau_est_max": 1.7923378944396973,
+      "temperature_min_channels": [
+        36,
+        35
+      ],
+      "temperature_max_channels": [
+        38,
+        37
+      ]
+    }
+  },
+  "axes": [
+    {
+      "axis": "left-pitch",
+      "slot": 4,
+      "duration_s": 39.997714919,
+      "q_range_deg": [
+        -2.5711758136749268,
+        2.9387543201446533
+      ],
+      "target_peak_to_peak_deg": 9.99999970909292,
+      "feedback_peak_to_peak_deg": 5.5099306789222116,
+      "companion_peak_to_peak_deg": 1.3220857801369297,
+      "selected_raw_dq_peak_rad_s": 0.4777410328388214,
+      "warning_episodes": 20,
+      "max_warning_duration_s": 0.02943571,
+      "ankle_kp_values": [
+        40.0
+      ],
+      "ankle_kd_values": [
+        1.0
+      ],
+      "tau_ff_values": [
+        0.0
+      ],
+      "dq_vs_q_derivative": {
+        "0.01": {
+          "correlation": 0.9704572439112676,
+          "rmse_rad_s": 0.009001575076862802,
+          "derivative_peak_rad_s": 0.46339201813322195
+        },
+        "0.02": {
+          "correlation": 0.9771300803836014,
+          "rmse_rad_s": 0.008493555131307706,
+          "derivative_peak_rad_s": 0.41015404311353054
+        },
+        "0.05": {
+          "correlation": 0.9386304351062372,
+          "rmse_rad_s": 0.013804143032814804,
+          "derivative_peak_rad_s": 0.29069578817217473
+        }
+      },
+      "integral_check": [
+        {
+          "cycle": 1,
+          "segment": "ramp-negative",
+          "q_change_deg": -4.527227820576518,
+          "integrated_dq_deg": -5.216633322097925,
+          "residual_deg": -0.689405501521407
+        },
+        {
+          "cycle": 1,
+          "segment": "ramp-positive",
+          "q_change_deg": 2.713571618326478,
+          "integrated_dq_deg": 2.9685918470543102,
+          "residual_deg": 0.25502022872783225
+        },
+        {
+          "cycle": 1,
+          "segment": "ramp-zero-after-negative",
+          "q_change_deg": 0.5646936803153262,
+          "integrated_dq_deg": 0.6490636060221218,
+          "residual_deg": 0.08436992570679554
+        },
+        {
+          "cycle": 1,
+          "segment": "ramp-zero-after-positive",
+          "q_change_deg": -0.38517080243970936,
+          "integrated_dq_deg": -0.4915566220236533,
+          "residual_deg": -0.10638581958394393
+        },
+        {
+          "cycle": 2,
+          "segment": "ramp-negative",
+          "q_change_deg": -4.106779304517104,
+          "integrated_dq_deg": -4.677724234479851,
+          "residual_deg": -0.5709449299627473
+        },
+        {
+          "cycle": 2,
+          "segment": "ramp-positive",
+          "q_change_deg": 4.481247413970816,
+          "integrated_dq_deg": 4.947965384660149,
+          "residual_deg": 0.4667179706893342
+        },
+        {
+          "cycle": 2,
+          "segment": "ramp-zero-after-negative",
+          "q_change_deg": 1.003430988372801,
+          "integrated_dq_deg": 1.1294313426701112,
+          "residual_deg": 0.12600035429731024
+        },
+        {
+          "cycle": 2,
+          "segment": "ramp-zero-after-positive",
+          "q_change_deg": -0.6181515432366061,
+          "integrated_dq_deg": -0.7385796175312431,
+          "residual_deg": -0.12042807429463688
+        }
+      ]
+    },
+    {
+      "axis": "left-roll",
+      "slot": 5,
+      "duration_s": 39.999872354000004,
+      "q_range_deg": [
+        -1.065368890762329,
+        1.8970355987548828
+      ],
+      "target_peak_to_peak_deg": 6.000000166965211,
+      "feedback_peak_to_peak_deg": 2.9624045878567395,
+      "companion_peak_to_peak_deg": 2.33025563913325,
+      "selected_raw_dq_peak_rad_s": 0.27834099531173706,
+      "warning_episodes": 4,
+      "max_warning_duration_s": 0.021825867000000002,
+      "ankle_kp_values": [
+        40.0
+      ],
+      "ankle_kd_values": [
+        1.0
+      ],
+      "tau_ff_values": [
+        0.0
+      ],
+      "dq_vs_q_derivative": {
+        "0.01": {
+          "correlation": 0.9404374690758516,
+          "rmse_rad_s": 0.008003593851972177,
+          "derivative_peak_rad_s": 0.2596051320346822
+        },
+        "0.02": {
+          "correlation": 0.939105090044209,
+          "rmse_rad_s": 0.008239974000064551,
+          "derivative_peak_rad_s": 0.24115581330116886
+        },
+        "0.05": {
+          "correlation": 0.8799306076185907,
+          "rmse_rad_s": 0.010815587656397502,
+          "derivative_peak_rad_s": 0.17637062961676184
+        }
+      },
+      "integral_check": [
+        {
+          "cycle": 1,
+          "segment": "ramp-negative",
+          "q_change_deg": -1.7498511363447196,
+          "integrated_dq_deg": -2.666640099331892,
+          "residual_deg": -0.9167889629871724
+        },
+        {
+          "cycle": 1,
+          "segment": "ramp-positive",
+          "q_change_deg": 1.7108075338931052,
+          "integrated_dq_deg": 1.3879513970418553,
+          "residual_deg": -0.3228561368512498
+        },
+        {
+          "cycle": 1,
+          "segment": "ramp-zero-after-negative",
+          "q_change_deg": 0.28764626654079967,
+          "integrated_dq_deg": -0.25350757572155813,
+          "residual_deg": -0.5411538422623577
+        },
+        {
+          "cycle": 1,
+          "segment": "ramp-zero-after-positive",
+          "q_change_deg": -1.1446067296487334,
+          "integrated_dq_deg": -2.058936813258138,
+          "residual_deg": -0.9143300836094043
+        },
+        {
+          "cycle": 2,
+          "segment": "ramp-negative",
+          "q_change_deg": -1.3656120143964823,
+          "integrated_dq_deg": -2.1385303649987693,
+          "residual_deg": -0.7729183506022871
+        },
+        {
+          "cycle": 2,
+          "segment": "ramp-positive",
+          "q_change_deg": 2.2518694000104222,
+          "integrated_dq_deg": 1.8833875754100284,
+          "residual_deg": -0.3684818246003937
+        },
+        {
+          "cycle": 2,
+          "segment": "ramp-zero-after-negative",
+          "q_change_deg": 0.3040868520381377,
+          "integrated_dq_deg": -0.22934028649691846,
+          "residual_deg": -0.5334271385350561
+        },
+        {
+          "cycle": 2,
+          "segment": "ramp-zero-after-positive",
+          "q_change_deg": -0.6791662100617119,
+          "integrated_dq_deg": -1.4900834828678373,
+          "residual_deg": -0.8109172728061255
+        }
+      ]
+    },
+    {
+      "axis": "right-pitch",
+      "slot": 10,
+      "duration_s": 40.000023858000006,
+      "q_range_deg": [
+        -0.6998088955879211,
+        2.073513984680176
+      ],
+      "target_peak_to_peak_deg": 9.99999970909292,
+      "feedback_peak_to_peak_deg": 2.7733231804028073,
+      "companion_peak_to_peak_deg": 1.496554851635266,
+      "selected_raw_dq_peak_rad_s": 0.7025516629219055,
+      "warning_episodes": 15,
+      "max_warning_duration_s": 0.066608997,
+      "ankle_kp_values": [
+        40.0
+      ],
+      "ankle_kd_values": [
+        1.0
+      ],
+      "tau_ff_values": [
+        0.0
+      ],
+      "dq_vs_q_derivative": {
+        "0.01": {
+          "correlation": 0.9793218034929861,
+          "rmse_rad_s": 0.006370118613347943,
+          "derivative_peak_rad_s": 0.6791178366833333
+        },
+        "0.02": {
+          "correlation": 0.9776088291914761,
+          "rmse_rad_s": 0.006854773893837195,
+          "derivative_peak_rad_s": 0.6267458378171611
+        },
+        "0.05": {
+          "correlation": 0.9312739873242273,
+          "rmse_rad_s": 0.011762001812012137,
+          "derivative_peak_rad_s": 0.47579411598292987
+        }
+      },
+      "integral_check": [
+        {
+          "cycle": 1,
+          "segment": "ramp-negative",
+          "q_change_deg": -2.2705918022990734,
+          "integrated_dq_deg": -2.380701856626929,
+          "residual_deg": -0.11011005432785594
+        },
+        {
+          "cycle": 1,
+          "segment": "ramp-positive",
+          "q_change_deg": 0.743154997383535,
+          "integrated_dq_deg": 0.9998998406264736,
+          "residual_deg": 0.2567448432429386
+        },
+        {
+          "cycle": 1,
+          "segment": "ramp-zero-after-negative",
+          "q_change_deg": 0.07556270295296841,
+          "integrated_dq_deg": 0.11786298478670691,
+          "residual_deg": 0.042300281833738504
+        },
+        {
+          "cycle": 1,
+          "segment": "ramp-zero-after-positive",
+          "q_change_deg": -0.36247536448822637,
+          "integrated_dq_deg": -0.39092474332981075,
+          "residual_deg": -0.02844937884158438
+        },
+        {
+          "cycle": 2,
+          "segment": "ramp-negative",
+          "q_change_deg": -2.1481416649629654,
+          "integrated_dq_deg": -2.346513605385185,
+          "residual_deg": -0.19837194042221926
+        },
+        {
+          "cycle": 2,
+          "segment": "ramp-positive",
+          "q_change_deg": 2.444245093078416,
+          "integrated_dq_deg": 2.6750673603830526,
+          "residual_deg": 0.23082226730463654
+        },
+        {
+          "cycle": 2,
+          "segment": "ramp-zero-after-negative",
+          "q_change_deg": 0.10505919504878582,
+          "integrated_dq_deg": 0.17884491084424245,
+          "residual_deg": 0.07378571579545663
+        },
+        {
+          "cycle": 2,
+          "segment": "ramp-zero-after-positive",
+          "q_change_deg": -0.425711923866849,
+          "integrated_dq_deg": -0.44676058778067446,
+          "residual_deg": -0.02104866391382549
+        }
+      ]
+    },
+    {
+      "axis": "right-roll",
+      "slot": 11,
+      "duration_s": 39.998153045,
+      "q_range_deg": [
+        -0.7900416254997253,
+        0.1401943564414978
+      ],
+      "target_peak_to_peak_deg": 6.000000166965211,
+      "feedback_peak_to_peak_deg": 0.9302360131842999,
+      "companion_peak_to_peak_deg": 0.3657570836214324,
+      "selected_raw_dq_peak_rad_s": 0.23872926831245422,
+      "warning_episodes": 0,
+      "max_warning_duration_s": 0,
+      "ankle_kp_values": [
+        40.0
+      ],
+      "ankle_kd_values": [
+        1.0
+      ],
+      "tau_ff_values": [
+        0.0
+      ],
+      "dq_vs_q_derivative": {
+        "0.01": {
+          "correlation": 0.713157366247701,
+          "rmse_rad_s": 0.008337347913219786,
+          "derivative_peak_rad_s": 0.20625783173946718
+        },
+        "0.02": {
+          "correlation": 0.686835422664562,
+          "rmse_rad_s": 0.008658498132036504,
+          "derivative_peak_rad_s": 0.15053892929798718
+        },
+        "0.05": {
+          "correlation": 0.5835336309452909,
+          "rmse_rad_s": 0.009593711628708809,
+          "derivative_peak_rad_s": 0.07312307044770726
+        }
+      },
+      "integral_check": [
+        {
+          "cycle": 1,
+          "segment": "ramp-negative",
+          "q_change_deg": -0.7680334811876305,
+          "integrated_dq_deg": -1.3395269261603333,
+          "residual_deg": -0.5714934449727028
+        },
+        {
+          "cycle": 1,
+          "segment": "ramp-positive",
+          "q_change_deg": 0.3524775683689144,
+          "integrated_dq_deg": -0.03982249331135517,
+          "residual_deg": -0.39230006168026965
+        },
+        {
+          "cycle": 1,
+          "segment": "ramp-zero-after-negative",
+          "q_change_deg": 0.552632366653877,
+          "integrated_dq_deg": 0.15882348037895067,
+          "residual_deg": -0.3938088862749264
+        },
+        {
+          "cycle": 1,
+          "segment": "ramp-zero-after-positive",
+          "q_change_deg": -0.12224788636343858,
+          "integrated_dq_deg": -0.5759009052248288,
+          "residual_deg": -0.4536530188613903
+        },
+        {
+          "cycle": 2,
+          "segment": "ramp-negative",
+          "q_change_deg": -0.5916575062503912,
+          "integrated_dq_deg": -1.0436800717111523,
+          "residual_deg": -0.4520225654607612
+        },
+        {
+          "cycle": 2,
+          "segment": "ramp-positive",
+          "q_change_deg": 0.22750423642344242,
+          "integrated_dq_deg": -0.27702141552068354,
+          "residual_deg": -0.5045256519441259
+        },
+        {
+          "cycle": 2,
+          "segment": "ramp-zero-after-negative",
+          "q_change_deg": 0.5498546674566505,
+          "integrated_dq_deg": 0.1082265463431332,
+          "residual_deg": -0.44162812111351724
+        },
+        {
+          "cycle": 2,
+          "segment": "ramp-zero-after-positive",
+          "q_change_deg": -0.18191524501390638,
+          "integrated_dq_deg": -0.6689864867863933,
+          "residual_deg": -0.48707124177248695
+        }
+      ]
+    }
+  ],
+  "nonfinite_by_field": {
+    "motor_q": 0,
+    "motor_dq": 0,
+    "motor_ddq": 0,
+    "motor_tau_est": 0,
+    "imu_quaternion": 0,
+    "imu_gyroscope": 0,
+    "imu_accelerometer": 0
+  },
+  "tick_increment_counts": {
+    "1": 955135,
+    "0": 50433,
+    "2": 185,
+    "3": 20,
+    "5": 6,
+    "4": 6,
+    "7": 4,
+    "17": 1,
+    "9": 1
+  },
+  "last_10s_zero_hold": {
+    "description": "Commanded zero hold; stationary behavior inferred only from recorded q, no external reference",
+    "samples": 10526,
+    "slots": [
+      4,
+      5,
+      10,
+      11
+    ],
+    "mean_q_deg": [
+      0.39637440848610034,
+      -0.736483166440009,
+      -0.28269847766674344,
+      -0.2271255600853328
+    ],
+    "q_peak_to_peak_deg": [
+      0.003744571004062891,
+      0.007252379786223173,
+      0.006927252281457186,
+      0.009961563162505627
+    ],
+    "mean_dq_rad_s": [
+      -0.0002221166835111829,
+      -0.003371434150509411,
+      0.00015612029805499452,
+      -0.00259650974802508
+    ],
+    "std_dq_rad_s": [
+      0.003700730251784115,
+      0.005623319644164825,
+      0.004797423387940924,
+      0.007318511373720633
+    ]
+  }
+}

@@ -1,0 +1,88 @@
+{
+  "run": "<original-project>/outputs/hardware/ankle_test/ankle_pr_qualitative_08",
+  "start_ns": 260722543015757,
+  "end_ns": 260732543015757,
+  "samples": 10526,
+  "slots": [
+    4,
+    5,
+    10,
+    11
+  ],
+  "command_samples": 5000,
+  "dq_mean_rad_s": [
+    -0.0002221166835111829,
+    -0.003371434150509411,
+    0.00015612029805499452,
+    -0.00259650974802508
+  ],
+  "std": {
+    "q": [
+      9.488895172973369e-06,
+      1.4918353073058852e-05,
+      1.6040031298785458e-05,
+      2.5012637176275196e-05
+    ],
+    "dq": [
+      0.003700730251784115,
+      0.005623319644164825,
+      0.004797423387940924,
+      0.007318511373720633
+    ],
+    "gyro": [
+      0.0050123276612276686,
+      0.005524732819208983,
+      0.0071776758372437055
+    ],
+    "accel": [
+      0.03732652125820281,
+      0.04415118090501887,
+      0.0408898210896009
+    ]
+  },
+  "units": {
+    "q": "rad",
+    "dq": "rad/s",
+    "gyro": "rad/s",
+    "accel": "m/s^2"
+  },
+  "sources": [
+    {
+      "path": "<original-project>/outputs/hardware/ankle_test/ankle_pr_qualitative_08/state_000198.npz",
+      "sha256": "e4e632a77393bb023ae52ebc475a98cbf377374f9c71d8708b1e51e1ffd94905"
+    },
+    {
+      "path": "<original-project>/outputs/hardware/ankle_test/ankle_pr_qualitative_08/state_000199.npz",
+      "sha256": "f37136d0ce60b0b791a87c9f495f9a087bba926a4a9e1d8c33230701e5b30d59"
+    },
+    {
+      "path": "<original-project>/outputs/hardware/ankle_test/ankle_pr_qualitative_08/state_000200.npz",
+      "sha256": "e3438a2dbcd6ce107db52e78dd5978d4e165550dade32f1d884fac05d71c64d1"
+    },
+    {
+      "path": "<original-project>/outputs/hardware/ankle_test/ankle_pr_qualitative_08/command_000080.npz",
+      "sha256": "34cdcb025d6fa6d008f974350cd43fcee8dd43fe5fb97ec69ad1ab7243400977"
+    },
+    {
+      "path": "<original-project>/outputs/hardware/ankle_test/ankle_pr_qualitative_08/command_000081.npz",
+      "sha256": "9f217db31d43aaa354d872599efe32736594341721272ca21fbdacb170e80285"
+    },
+    {
+      "path": "<original-project>/outputs/hardware/ankle_test/ankle_pr_qualitative_08/summary.json",
+      "sha256": "404fb8fb770cc6d15ccc49ade29720b9fa72bba14856c071a4e0305d8cffc08b"
+    },
+    {
+      "path": "<original-project>/outputs/hardware/ankle_test/ankle_pr_qualitative_08/events.jsonl",
+      "sha256": "5b1df790dbd90dc946c6b987f3f1d9ecfb22537bddcefca2f3f25c8b8368f451"
+    },
+    {
+      "path": "<original-project>/outputs/hardware/ankle_test/ankle_pr_qualitative_08/metadata.json",
+      "sha256": "12002e8f46467741e00f020822157679eb5f11a4cbe3c0751d651f085a7073c0"
+    }
+  ],
+  "limitations": [
+    "One suspended hold is not a stationary sensor calibration.",
+    "Independent per-sample Gaussian draws omit colored noise, bias drift and cross-channel correlation.",
+    "Measured dq means are diagnostic residuals, not calibrated constant offsets."
+  ]
+}

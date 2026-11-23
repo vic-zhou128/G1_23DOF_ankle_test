@@ -1,0 +1,146 @@
+{
+  "schema": "g1_inekf_input_sensitivity_v1",
+  "status": "development_not_acceptance",
+  "created_utc": "2026-11-23T11:27:59.530406+00:00",
+  "cases": [
+    "baseline",
+    "sign_4",
+    "sign_5",
+    "sign_10",
+    "sign_11",
+    "swap_4_5",
+    "swap_10_11",
+    "dq_residual",
+    "delay_2ms",
+    "delay_10ms",
+    "delay_20ms",
+    "noise_seed_0",
+    "noise_seed_1",
+    "noise_seed_2",
+    "noise_seed_3",
+    "noise_seed_4"
+  ],
+  "scenario_definitions": [
+    {
+      "id": "baseline",
+      "kind": "baseline"
+    },
+    {
+      "id": "sign_4",
+      "kind": "sign",
+      "slot": 4
+    },
+    {
+      "id": "sign_5",
+      "kind": "sign",
+      "slot": 5
+    },
+    {
+      "id": "sign_10",
+      "kind": "sign",
+      "slot": 10
+    },
+    {
+      "id": "sign_11",
+      "kind": "sign",
+      "slot": 11
+    },
+    {
+      "id": "swap_4_5",
+      "kind": "swap",
+      "slots": [
+        4,
+        5
+      ]
+    },
+    {
+      "id": "swap_10_11",
+      "kind": "swap",
+      "slots": [
+        10,
+        11
+      ]
+    },
+    {
+      "id": "dq_residual",
+      "kind": "dq_residual"
+    },
+    {
+      "id": "delay_2ms",
+      "kind": "delay",
+      "delay_ms": 2
+    },
+    {
+      "id": "delay_10ms",
+      "kind": "delay",
+      "delay_ms": 10
+    },
+    {
+      "id": "delay_20ms",
+      "kind": "delay",
+      "delay_ms": 20
+    },
+    {
+      "id": "noise_seed_0",
+      "kind": "noise",
+      "seed": 0
+    },
+    {
+      "id": "noise_seed_1",
+      "kind": "noise",
+      "seed": 1
+    },
+    {
+      "id": "noise_seed_2",
+      "kind": "noise",
+      "seed": 2
+    },
+    {
+      "id": "noise_seed_3",
+      "kind": "noise",
+      "seed": 3
+    },
+    {
+      "id": "noise_seed_4",
+      "kind": "noise",
+      "seed": 4
+    }
+  ],
+  "trials": [
+    "no_push",
+    "right_40N"
+  ],
+  "planned_replays": 64,
+  "initialization_time_s": 11.0,
+  "sources": {
+    "no_push": {
+      "path": "<original-project>/outputs/simulation/p2_no_push_seed_20261118_v4.csv",
+      "sha256": "96dbc3c2070d68c16a940f0be2bff62804bbabe3121e0d4bbb73f8d84c83e115",
+      "metadata_sha256": "78cbb8946370e0d0a758c3a8b68880541927543fa942a48bfb0c4abdc4d48dbd"
+    },
+    "right_40N": {
+      "path": "<original-project>/outputs/simulation/p2_right_40N_seed_20261118_v4.csv",
+      "sha256": "32a13c14808b1ee6c07e8bac375d9527b18cfae5dcbb3c9d43c9e44c3a43cd12",
+      "metadata_sha256": "5491c460b9e445492499a2987864dd989dd8616e9ce26f71239f1a585d4450bb"
+    }
+  },
+  "identities": {
+    "<original-project>/g1_baseline_dcm_python/assets/p2_offline_estimation.yaml": "37406b1fa256326152a9b106ac2ffa0c0a835f4d716f66cee0bfd3739ca048c1",
+    "<original-project>/models/g1_description/g1_23dof_rev_1_0.urdf": "7a16cc8fc1cd053ba8ee7b03057585959336c9aee2bad720bb4d2fa980034efb",
+    "<original-project>/g1_baseline_dcm_python/build/p2_py311/g1_inekf_offline": "a6d10bf23c62207d5405386f11ace98152b63198a21d389c02114bb564c497b5",
+    "<original-project>/g1_baseline_dcm_python/ankle_test/run_inekf_sensitivity.py": "871ad939e8c45eafacedfbad146004375a6da65d9ce3cac7aa49f97066639f22",
+    "<original-project>/g1_baseline_dcm_python/g1_estimator.py": "3b73ea50a67992759bbc0bd2deef3925df2f2a1c8698059f1f6270c4d400aa09",
+    "<original-project>/g1_baseline_dcm_python/p2_run_inekf.py": "956f1e2b0093e93ba13b79d3f92e3629a10be9f7f6d0049b2661cf8b287e150a",
+    "<original-project>/g1_baseline_dcm_python/p2_evaluate_offline.py": "b02ae53d13035d818656bff63c7293e32fc8216e2b416d3a07812502f38736b2",
+    "<original-project>/g1_baseline_dcm_python/cpp/g1_inekf_offline.cpp": "6696cde7c510cddca91930ac3a6ca338f3668632497d4d4605b3622bca3e7862"
+  },
+  "implementation": "RossHartley/invariant-ekf",
+  "upstream_commit": "ef16e8a1df72f9272111a488880e3fe9d161f59f",
+  "limitations": [
+    "Fixed-trajectory offline sensitivity, not estimator/controller-in-the-loop simulation.",
+    "Two development trajectories; five noise seeds are not independent locomotion trials.",
+    "No PR/AB verdict: sign and swap faults are not physical AB kinematics.",
+    "Noise statistics from a suspended ten-second hold are diagnostic, not calibrated sensor specifications.",
+    "Fixed initialization and filter parameters; no tuning on individual injected errors."
+  ]
+}
